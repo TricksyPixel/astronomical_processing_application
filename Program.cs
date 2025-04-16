@@ -16,7 +16,7 @@ namespace astronomical_processing_application
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new astronomical_processing_application());
         }
     }
 }
