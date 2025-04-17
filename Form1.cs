@@ -76,7 +76,7 @@ namespace astronomical_processing_application
                 if (dataArray[mid] == target)
                 {
                     ResultsListBox.Items.Clear();
-                    ResultsListBox.Items.Add("Found search result at element: " + mid);
+                    ResultsListBox.Items.Add("Found search result at index: " + (mid + 1));
                     return;
                     // DataListBox.SetSelected(mid, true);
                 }

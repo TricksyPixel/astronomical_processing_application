@@ -138,6 +138,7 @@
             this.ResultsListBox.Location = new System.Drawing.Point(158, 153);
             this.ResultsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.ResultsListBox.Name = "ResultsListBox";
+            this.ResultsListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
             this.ResultsListBox.Size = new System.Drawing.Size(199, 69);
             this.ResultsListBox.TabIndex = 9;
             // 
