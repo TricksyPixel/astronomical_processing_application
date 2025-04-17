@@ -32,9 +32,93 @@ namespace astronomical_processing_application
 {
     public partial class astronomical_processing_application : Form
     {
+        // Global attributes.
+
+        // Create the array for storing data stream.
+        static int max = 24;
+        int[] dataArray = new int[max];
+
+        // Start application.
         public astronomical_processing_application()
         {
             InitializeComponent();
+
+            // Call FillArray method to fill array on startup.
+            FillArray();
+
+            // Call DisplayArray to display the neutrino data onto the DataListBox.
+            DisplayArray();
+        }
+
+        // Binary Search Button
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            // Sort the array if it's still out of order
+            // to ensure binary search can run correctly.
+            Array.Sort(dataArray);
+
+            // Run Binary Search.
+            int mid;
+            int min = 0;
+            int max = dataArray.Length;
+            int target;
+
+            if (!(Int32.TryParse(SearchTextBox.Text, out target)))
+            {
+                MessageBox.Show("You must enter an integer number.");
+            }
+            while (min <= max)
+            {
+                mid = (min + max) / 2;
+
+                if (dataArray[mid] == target)
+                {
+                    ResultsListBox.Items.Add("Found search result at element: " + mid);
+                    DataListBox.SetSelected(mid, true);
+                }
+                else if (dataArray[mid] >= target)
+                {
+                    max = mid - 1;
+                }
+            }
+        }
+
+        // Modify Element Button.
+        private void ModifyButton_Click(object sender, EventArgs e)
+        {
+            // Modify specific data element.
+            // Select hour by using DataListBox.SelectedIndex.
+            // Take the selected hour element and user input value, then replace.
+        }
+        
+        // Bubble Sort Button.
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+            // Run Bubble Sort here.
+            // Once sorted, refresh DataListBox element with updated array.
+        }
+
+        // Method to fill the array with random numbers (to represent the
+        // neutrino data stream pulled from the local observatory.
+        private void FillArray()
+        {
+            // Create random number between 10 to 90
+            Random rand = new Random();
+            for (int i = 0; i < max; i++)
+            {
+                // Store random numbers between 10 and 90 into the array elements.
+                dataArray[i] = rand.Next(10, 90);
+            }
+        }
+
+        // Method to display the array to the DataListBox.
+        private void DisplayArray()
+        {
+            DataListBox.Items.Clear();
+            for (int i = 0; i < max; i++)
+            {
+                DataListBox.Items.Add(dataArray[i]);
+            }
         }
     }
 }
