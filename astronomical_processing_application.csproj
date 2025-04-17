@@ -83,5 +83,8 @@
   <ItemGroup>
     <None Include="Resources\space-4984262_1280.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\astronomical_processing_banner.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,16 @@ namespace astronomical_processing_application.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap astronomical_processing_banner {
+            get {
+                object obj = ResourceManager.GetObject("astronomical_processing_banner", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap space_4984262_1280 {
             get {
                 object obj = ResourceManager.GetObject("space-4984262_1280", resourceCulture);
