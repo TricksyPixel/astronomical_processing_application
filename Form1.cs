@@ -56,6 +56,7 @@ namespace astronomical_processing_application
             // Sort the array if it's still out of order
             // to ensure binary search can run correctly.
             Array.Sort(dataArray);
+            DisplayArray();
 
             // Run Binary Search.
             int mid;
@@ -66,6 +67,7 @@ namespace astronomical_processing_application
             if (!(Int32.TryParse(SearchTextBox.Text, out target)))
             {
                 MessageBox.Show("You must enter an integer number.");
+                return;
             }
             while (min <= max)
             {
@@ -73,14 +75,23 @@ namespace astronomical_processing_application
 
                 if (dataArray[mid] == target)
                 {
+                    ResultsListBox.Items.Clear();
                     ResultsListBox.Items.Add("Found search result at element: " + mid);
-                    DataListBox.SetSelected(mid, true);
+                    return;
+                    // DataListBox.SetSelected(mid, true);
                 }
                 else if (dataArray[mid] >= target)
                 {
                     max = mid - 1;
                 }
+                else
+                {
+                    min = mid + 1;
+                }
             }
+            // If search result comes back unsuccessful, display this to user
+            // in the Results ListBox.
+            ResultsListBox.Items.Add("Search result not found. Please try again.");
         }
 
         // Modify Element Button.

@@ -46,6 +46,8 @@
             this.SortGroupBox = new System.Windows.Forms.GroupBox();
             this.SortButton = new System.Windows.Forms.Button();
             this.SortLabel = new System.Windows.Forms.Label();
+            this.SearchSortWarningLabel = new System.Windows.Forms.Label();
+            this.SearchGroupBox.SuspendLayout();
             this.ModifyGroupBox.SuspendLayout();
             this.SortGroupBox.SuspendLayout();
             this.SuspendLayout();
@@ -123,7 +125,7 @@
             // ResultsLabel
             // 
             this.ResultsLabel.AutoSize = true;
-            this.ResultsLabel.Location = new System.Drawing.Point(156, 118);
+            this.ResultsLabel.Location = new System.Drawing.Point(156, 138);
             this.ResultsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ResultsLabel.Name = "ResultsLabel";
             this.ResultsLabel.Size = new System.Drawing.Size(45, 13);
@@ -133,7 +135,7 @@
             // ResultsListBox
             // 
             this.ResultsListBox.FormattingEnabled = true;
-            this.ResultsListBox.Location = new System.Drawing.Point(158, 133);
+            this.ResultsListBox.Location = new System.Drawing.Point(158, 153);
             this.ResultsListBox.Margin = new System.Windows.Forms.Padding(2);
             this.ResultsListBox.Name = "ResultsListBox";
             this.ResultsListBox.Size = new System.Drawing.Size(199, 69);
@@ -141,11 +143,12 @@
             // 
             // SearchGroupBox
             // 
+            this.SearchGroupBox.Controls.Add(this.SearchSortWarningLabel);
             this.SearchGroupBox.Location = new System.Drawing.Point(125, 49);
             this.SearchGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchGroupBox.Name = "SearchGroupBox";
             this.SearchGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.SearchGroupBox.Size = new System.Drawing.Size(268, 173);
+            this.SearchGroupBox.Size = new System.Drawing.Size(268, 199);
             this.SearchGroupBox.TabIndex = 10;
             this.SearchGroupBox.TabStop = false;
             this.SearchGroupBox.Text = "Search Data";
@@ -156,7 +159,7 @@
             this.ModifyGroupBox.Controls.Add(this.NewValueTextBox);
             this.ModifyGroupBox.Controls.Add(this.EnterValueLabel);
             this.ModifyGroupBox.Controls.Add(this.SlectHourLabel);
-            this.ModifyGroupBox.Location = new System.Drawing.Point(125, 236);
+            this.ModifyGroupBox.Location = new System.Drawing.Point(125, 263);
             this.ModifyGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.ModifyGroupBox.Name = "ModifyGroupBox";
             this.ModifyGroupBox.Padding = new System.Windows.Forms.Padding(2);
@@ -209,7 +212,7 @@
             // 
             this.SortGroupBox.Controls.Add(this.SortButton);
             this.SortGroupBox.Controls.Add(this.SortLabel);
-            this.SortGroupBox.Location = new System.Drawing.Point(125, 377);
+            this.SortGroupBox.Location = new System.Drawing.Point(125, 404);
             this.SortGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.SortGroupBox.Name = "SortGroupBox";
             this.SortGroupBox.Padding = new System.Windows.Forms.Padding(2);
@@ -239,6 +242,15 @@
             this.SortLabel.TabIndex = 13;
             this.SortLabel.Text = "Sort data in numerical order:";
             // 
+            // SearchSortWarningLabel
+            // 
+            this.SearchSortWarningLabel.AutoSize = true;
+            this.SearchSortWarningLabel.Location = new System.Drawing.Point(5, 62);
+            this.SearchSortWarningLabel.Name = "SearchSortWarningLabel";
+            this.SearchSortWarningLabel.Size = new System.Drawing.Size(257, 13);
+            this.SearchSortWarningLabel.TabIndex = 13;
+            this.SearchSortWarningLabel.Text = "(Searching will result in data being sorted numerically)";
+            // 
             // astronomical_processing_application
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,6 +271,8 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "astronomical_processing_application";
             this.Text = "Astronomical Processing";
+            this.SearchGroupBox.ResumeLayout(false);
+            this.SearchGroupBox.PerformLayout();
             this.ModifyGroupBox.ResumeLayout(false);
             this.ModifyGroupBox.PerformLayout();
             this.SortGroupBox.ResumeLayout(false);
@@ -288,6 +302,7 @@
         private System.Windows.Forms.GroupBox SortGroupBox;
         private System.Windows.Forms.Button SortButton;
         private System.Windows.Forms.Label SortLabel;
+        private System.Windows.Forms.Label SearchSortWarningLabel;
     }
 }
 
