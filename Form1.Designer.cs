@@ -38,6 +38,7 @@
             this.ResultsLabel = new System.Windows.Forms.Label();
             this.ResultsListBox = new System.Windows.Forms.ListBox();
             this.SearchGroupBox = new System.Windows.Forms.GroupBox();
+            this.SearchSortWarningLabel = new System.Windows.Forms.Label();
             this.ModifyGroupBox = new System.Windows.Forms.GroupBox();
             this.ModifyButton = new System.Windows.Forms.Button();
             this.NewValueTextBox = new System.Windows.Forms.TextBox();
@@ -46,7 +47,6 @@
             this.SortGroupBox = new System.Windows.Forms.GroupBox();
             this.SortButton = new System.Windows.Forms.Button();
             this.SortLabel = new System.Windows.Forms.Label();
-            this.SearchSortWarningLabel = new System.Windows.Forms.Label();
             this.SearchGroupBox.SuspendLayout();
             this.ModifyGroupBox.SuspendLayout();
             this.SortGroupBox.SuspendLayout();
@@ -54,30 +54,33 @@
             // 
             // DataListBox
             // 
+            this.DataListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
+            this.DataListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DataListBox.FormattingEnabled = true;
-            this.DataListBox.Location = new System.Drawing.Point(47, 64);
-            this.DataListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.DataListBox.ItemHeight = 16;
+            this.DataListBox.Location = new System.Drawing.Point(63, 79);
+            this.DataListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.DataListBox.Name = "DataListBox";
-            this.DataListBox.Size = new System.Drawing.Size(52, 316);
+            this.DataListBox.Size = new System.Drawing.Size(68, 386);
             this.DataListBox.TabIndex = 0;
             // 
             // DataLabel
             // 
             this.DataLabel.AutoSize = true;
-            this.DataLabel.Location = new System.Drawing.Point(45, 49);
-            this.DataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.DataLabel.ForeColor = System.Drawing.Color.White;
+            this.DataLabel.Location = new System.Drawing.Point(60, 60);
             this.DataLabel.Name = "DataLabel";
-            this.DataLabel.Size = new System.Drawing.Size(33, 13);
+            this.DataLabel.Size = new System.Drawing.Size(39, 16);
             this.DataLabel.TabIndex = 1;
             this.DataLabel.Text = "Data:";
             // 
             // HourListLabel
             // 
             this.HourListLabel.AutoSize = true;
-            this.HourListLabel.Location = new System.Drawing.Point(24, 66);
-            this.HourListLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.HourListLabel.ForeColor = System.Drawing.Color.White;
+            this.HourListLabel.Location = new System.Drawing.Point(32, 81);
             this.HourListLabel.Name = "HourListLabel";
-            this.HourListLabel.Size = new System.Drawing.Size(22, 312);
+            this.HourListLabel.Size = new System.Drawing.Size(24, 384);
             this.HourListLabel.TabIndex = 3;
             this.HourListLabel.Text = "1.\r\n2.\r\n3.\r\n4.\r\n5.\r\n6.\r\n7.\r\n8.\r\n9.\r\n10.\r\n11.\r\n12.\r\n13.\r\n14.\r\n15.\r\n16.\r\n17.\r\n18.\r\n" +
     "19.\r\n20.\r\n21.\r\n22.\r\n23.\r\n24.";
@@ -86,37 +89,41 @@
             // NeutrinoStreamInfoLabel
             // 
             this.NeutrinoStreamInfoLabel.AutoSize = true;
-            this.NeutrinoStreamInfoLabel.Location = new System.Drawing.Point(163, 15);
-            this.NeutrinoStreamInfoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.NeutrinoStreamInfoLabel.ForeColor = System.Drawing.Color.White;
+            this.NeutrinoStreamInfoLabel.Location = new System.Drawing.Point(217, 18);
             this.NeutrinoStreamInfoLabel.Name = "NeutrinoStreamInfoLabel";
-            this.NeutrinoStreamInfoLabel.Size = new System.Drawing.Size(206, 13);
+            this.NeutrinoStreamInfoLabel.Size = new System.Drawing.Size(256, 16);
             this.NeutrinoStreamInfoLabel.TabIndex = 4;
             this.NeutrinoStreamInfoLabel.Text = "Neutrino data streamed from last 24 hours.";
             // 
             // SearchDataLabel
             // 
             this.SearchDataLabel.AutoSize = true;
-            this.SearchDataLabel.Location = new System.Drawing.Point(156, 74);
-            this.SearchDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SearchDataLabel.ForeColor = System.Drawing.Color.White;
+            this.SearchDataLabel.Location = new System.Drawing.Point(208, 91);
             this.SearchDataLabel.Name = "SearchDataLabel";
-            this.SearchDataLabel.Size = new System.Drawing.Size(120, 13);
+            this.SearchDataLabel.Size = new System.Drawing.Size(147, 16);
             this.SearchDataLabel.TabIndex = 5;
             this.SearchDataLabel.Text = "Enter number to search:";
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(158, 89);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
+            this.SearchTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SearchTextBox.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.SearchTextBox.Location = new System.Drawing.Point(211, 110);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(138, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(183, 22);
             this.SearchTextBox.TabIndex = 6;
             // 
             // SearchButton
             // 
-            this.SearchButton.Location = new System.Drawing.Point(300, 88);
-            this.SearchButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.SearchButton.Location = new System.Drawing.Point(400, 108);
+            this.SearchButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchButton.Name = "SearchButton";
-            this.SearchButton.Size = new System.Drawing.Size(56, 21);
+            this.SearchButton.Size = new System.Drawing.Size(75, 26);
             this.SearchButton.TabIndex = 7;
             this.SearchButton.Text = "Search";
             this.SearchButton.UseVisualStyleBackColor = true;
@@ -125,34 +132,49 @@
             // ResultsLabel
             // 
             this.ResultsLabel.AutoSize = true;
-            this.ResultsLabel.Location = new System.Drawing.Point(156, 138);
-            this.ResultsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ResultsLabel.ForeColor = System.Drawing.Color.White;
+            this.ResultsLabel.Location = new System.Drawing.Point(208, 170);
             this.ResultsLabel.Name = "ResultsLabel";
-            this.ResultsLabel.Size = new System.Drawing.Size(45, 13);
+            this.ResultsLabel.Size = new System.Drawing.Size(55, 16);
             this.ResultsLabel.TabIndex = 8;
             this.ResultsLabel.Text = "Results:";
             // 
             // ResultsListBox
             // 
+            this.ResultsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
+            this.ResultsListBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ResultsListBox.FormattingEnabled = true;
-            this.ResultsListBox.Location = new System.Drawing.Point(158, 153);
-            this.ResultsListBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ResultsListBox.ItemHeight = 16;
+            this.ResultsListBox.Location = new System.Drawing.Point(211, 188);
+            this.ResultsListBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ResultsListBox.Name = "ResultsListBox";
             this.ResultsListBox.SelectionMode = System.Windows.Forms.SelectionMode.None;
-            this.ResultsListBox.Size = new System.Drawing.Size(199, 69);
+            this.ResultsListBox.Size = new System.Drawing.Size(264, 82);
             this.ResultsListBox.TabIndex = 9;
             // 
             // SearchGroupBox
             // 
             this.SearchGroupBox.Controls.Add(this.SearchSortWarningLabel);
-            this.SearchGroupBox.Location = new System.Drawing.Point(125, 49);
-            this.SearchGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SearchGroupBox.ForeColor = System.Drawing.Color.White;
+            this.SearchGroupBox.Location = new System.Drawing.Point(167, 60);
+            this.SearchGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SearchGroupBox.Name = "SearchGroupBox";
-            this.SearchGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.SearchGroupBox.Size = new System.Drawing.Size(268, 199);
+            this.SearchGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SearchGroupBox.Size = new System.Drawing.Size(363, 245);
             this.SearchGroupBox.TabIndex = 10;
             this.SearchGroupBox.TabStop = false;
             this.SearchGroupBox.Text = "Search Data";
+            // 
+            // SearchSortWarningLabel
+            // 
+            this.SearchSortWarningLabel.AutoSize = true;
+            this.SearchSortWarningLabel.ForeColor = System.Drawing.Color.White;
+            this.SearchSortWarningLabel.Location = new System.Drawing.Point(10, 77);
+            this.SearchSortWarningLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SearchSortWarningLabel.Name = "SearchSortWarningLabel";
+            this.SearchSortWarningLabel.Size = new System.Drawing.Size(324, 16);
+            this.SearchSortWarningLabel.TabIndex = 13;
+            this.SearchSortWarningLabel.Text = "(Searching will result in data being sorted numerically)";
             // 
             // ModifyGroupBox
             // 
@@ -160,21 +182,23 @@
             this.ModifyGroupBox.Controls.Add(this.NewValueTextBox);
             this.ModifyGroupBox.Controls.Add(this.EnterValueLabel);
             this.ModifyGroupBox.Controls.Add(this.SlectHourLabel);
-            this.ModifyGroupBox.Location = new System.Drawing.Point(125, 263);
-            this.ModifyGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ModifyGroupBox.ForeColor = System.Drawing.Color.White;
+            this.ModifyGroupBox.Location = new System.Drawing.Point(167, 324);
+            this.ModifyGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModifyGroupBox.Name = "ModifyGroupBox";
-            this.ModifyGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.ModifyGroupBox.Size = new System.Drawing.Size(268, 125);
+            this.ModifyGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ModifyGroupBox.Size = new System.Drawing.Size(363, 154);
             this.ModifyGroupBox.TabIndex = 11;
             this.ModifyGroupBox.TabStop = false;
             this.ModifyGroupBox.Text = "Modify Data";
             // 
             // ModifyButton
             // 
-            this.ModifyButton.Location = new System.Drawing.Point(153, 79);
-            this.ModifyButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ModifyButton.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.ModifyButton.Location = new System.Drawing.Point(233, 105);
+            this.ModifyButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ModifyButton.Name = "ModifyButton";
-            this.ModifyButton.Size = new System.Drawing.Size(56, 20);
+            this.ModifyButton.Size = new System.Drawing.Size(75, 25);
             this.ModifyButton.TabIndex = 12;
             this.ModifyButton.Text = "Modify";
             this.ModifyButton.UseVisualStyleBackColor = true;
@@ -182,29 +206,31 @@
             // 
             // NewValueTextBox
             // 
-            this.NewValueTextBox.Location = new System.Drawing.Point(11, 79);
-            this.NewValueTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.NewValueTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(192)))), ((int)(((byte)(190)))));
+            this.NewValueTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewValueTextBox.Location = new System.Drawing.Point(44, 107);
+            this.NewValueTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.NewValueTextBox.Name = "NewValueTextBox";
-            this.NewValueTextBox.Size = new System.Drawing.Size(138, 20);
+            this.NewValueTextBox.Size = new System.Drawing.Size(183, 22);
             this.NewValueTextBox.TabIndex = 12;
             // 
             // EnterValueLabel
             // 
             this.EnterValueLabel.AutoSize = true;
-            this.EnterValueLabel.Location = new System.Drawing.Point(9, 64);
-            this.EnterValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.EnterValueLabel.ForeColor = System.Drawing.Color.White;
+            this.EnterValueLabel.Location = new System.Drawing.Point(41, 89);
             this.EnterValueLabel.Name = "EnterValueLabel";
-            this.EnterValueLabel.Size = new System.Drawing.Size(87, 13);
+            this.EnterValueLabel.Size = new System.Drawing.Size(104, 16);
             this.EnterValueLabel.TabIndex = 12;
             this.EnterValueLabel.Text = "Enter new value:";
             // 
             // SlectHourLabel
             // 
             this.SlectHourLabel.AutoSize = true;
-            this.SlectHourLabel.Location = new System.Drawing.Point(9, 22);
-            this.SlectHourLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SlectHourLabel.ForeColor = System.Drawing.Color.White;
+            this.SlectHourLabel.Location = new System.Drawing.Point(41, 37);
             this.SlectHourLabel.Name = "SlectHourLabel";
-            this.SlectHourLabel.Size = new System.Drawing.Size(201, 26);
+            this.SlectHourLabel.Size = new System.Drawing.Size(249, 32);
             this.SlectHourLabel.TabIndex = 12;
             this.SlectHourLabel.Text = "Select a data element you want to modify\r\nand enter a new value to replace it wit" +
     "h.\r\n";
@@ -213,21 +239,23 @@
             // 
             this.SortGroupBox.Controls.Add(this.SortButton);
             this.SortGroupBox.Controls.Add(this.SortLabel);
-            this.SortGroupBox.Location = new System.Drawing.Point(125, 404);
-            this.SortGroupBox.Margin = new System.Windows.Forms.Padding(2);
+            this.SortGroupBox.ForeColor = System.Drawing.Color.White;
+            this.SortGroupBox.Location = new System.Drawing.Point(167, 497);
+            this.SortGroupBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SortGroupBox.Name = "SortGroupBox";
-            this.SortGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.SortGroupBox.Size = new System.Drawing.Size(268, 72);
+            this.SortGroupBox.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SortGroupBox.Size = new System.Drawing.Size(363, 89);
             this.SortGroupBox.TabIndex = 12;
             this.SortGroupBox.TabStop = false;
             this.SortGroupBox.Text = "Sort Data";
             // 
             // SortButton
             // 
-            this.SortButton.Location = new System.Drawing.Point(147, 28);
-            this.SortButton.Margin = new System.Windows.Forms.Padding(2);
+            this.SortButton.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.SortButton.Location = new System.Drawing.Point(224, 36);
+            this.SortButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SortButton.Name = "SortButton";
-            this.SortButton.Size = new System.Drawing.Size(63, 20);
+            this.SortButton.Size = new System.Drawing.Size(84, 25);
             this.SortButton.TabIndex = 13;
             this.SortButton.Text = "Sort Data";
             this.SortButton.UseVisualStyleBackColor = true;
@@ -236,27 +264,21 @@
             // SortLabel
             // 
             this.SortLabel.AutoSize = true;
-            this.SortLabel.Location = new System.Drawing.Point(9, 32);
-            this.SortLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.SortLabel.ForeColor = System.Drawing.Color.White;
+            this.SortLabel.Location = new System.Drawing.Point(41, 40);
             this.SortLabel.Name = "SortLabel";
-            this.SortLabel.Size = new System.Drawing.Size(139, 13);
+            this.SortLabel.Size = new System.Drawing.Size(173, 16);
             this.SortLabel.TabIndex = 13;
             this.SortLabel.Text = "Sort data in numerical order:";
             // 
-            // SearchSortWarningLabel
-            // 
-            this.SearchSortWarningLabel.AutoSize = true;
-            this.SearchSortWarningLabel.Location = new System.Drawing.Point(5, 62);
-            this.SearchSortWarningLabel.Name = "SearchSortWarningLabel";
-            this.SearchSortWarningLabel.Size = new System.Drawing.Size(257, 13);
-            this.SearchSortWarningLabel.TabIndex = 13;
-            this.SearchSortWarningLabel.Text = "(Searching will result in data being sorted numerically)";
-            // 
             // astronomical_processing_application
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(427, 486);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(37)))), ((int)(((byte)(65)))));
+            this.BackgroundImage = global::astronomical_processing_application.Properties.Resources.space_4984262_1280;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(569, 612);
             this.Controls.Add(this.SortGroupBox);
             this.Controls.Add(this.ModifyGroupBox);
             this.Controls.Add(this.ResultsListBox);
@@ -269,8 +291,10 @@
             this.Controls.Add(this.DataLabel);
             this.Controls.Add(this.DataListBox);
             this.Controls.Add(this.SearchGroupBox);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "astronomical_processing_application";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Astronomical Processing";
             this.SearchGroupBox.ResumeLayout(false);
             this.SearchGroupBox.PerformLayout();

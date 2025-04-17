@@ -76,9 +76,12 @@ namespace astronomical_processing_application
                 if (dataArray[mid] == target)
                 {
                     ResultsListBox.Items.Clear();
+                    SearchTextBox.Clear();
+                    ResultsListBox.Items.Add("Searching for: " + target);
+                    ResultsListBox.Items.Add(" ");
                     ResultsListBox.Items.Add("Found search result at index: " + (mid + 1));
+                    DataListBox.SetSelected(mid, true);
                     return;
-                    // DataListBox.SetSelected(mid, true);
                 }
                 else if (dataArray[mid] >= target)
                 {
@@ -91,7 +94,10 @@ namespace astronomical_processing_application
             }
             // If search result comes back unsuccessful, display this to user
             // in the Results ListBox.
-            ResultsListBox.Items.Add("Search result not found. Please try again.");
+            //ResultsListBox.Items.Clear();
+            //ResultsListBox.Items.Add("Search result not found. Please try again.");
+            MessageBox.Show("Search result not found. Please try again.");
+            SearchTextBox.Clear();
         }
 
         // Modify Element Button.
