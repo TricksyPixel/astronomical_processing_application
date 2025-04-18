@@ -137,5 +137,47 @@ namespace astronomical_processing_application
                 DataListBox.Items.Add(dataArray[i]);
             }
         }
+
+        // Custom close and minimize buttons.
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void MinimizeButton_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void MinimizeButton_Click_1(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
+        }
+
+        // Make window draggable from top panel.
+        private bool mouseDown;
+        private Point lastLocation;
+
+        private void MouseDownPanel(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void MouseMovePanel(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X, (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void MouseUpPanel(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
     }
 }
