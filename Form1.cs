@@ -98,15 +98,42 @@ namespace astronomical_processing_application
             //ResultsListBox.Items.Add("Search result not found. Please try again.");
             MessageBox.Show("Search result not found. Please try again.");
             SearchTextBox.Clear();
-        }
+        }// End Binary Search Button.
 
         // Modify Element Button.
         private void ModifyButton_Click(object sender, EventArgs e)
         {
             // Modify specific data element.
-            // Select hour by using DataListBox.SelectedIndex.
-            // Take the selected hour element and user input value, then replace.
-        }
+            // Select element by using DataListBox.SelectedIndex.
+            // Take the selected element and user input value (NewValueTextBox), then replace.
+            int newValue;
+            int selected = DataListBox.SelectedIndex;
+
+            if (!(Int32.TryParse(NewValueTextBox.Text, out newValue)))
+            {
+                MessageBox.Show("You must enter an integer number.");
+                return;
+            }
+            if (selected != -1)// Ensures an item has first been selected.
+            {
+                if (newValue >= 10 && newValue <= 90)
+                {
+                    dataArray[selected] = newValue;
+                    DisplayArray();
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Please enter an integer number between 10 and 90.");
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("No index selected. Please select which index you want to modify in the Data list first.");
+                return;
+            }
+        }// End Modify Element Button.
 
         // Bubble Sort Button.
         private void SortButton_Click(object sender, EventArgs e)
@@ -129,7 +156,7 @@ namespace astronomical_processing_application
             }
             // Once sorted, refresh DataListBox element with updated array.
             DisplayArray();
-        }
+        }// End Bubble Sort Button
 
         // Method to fill the array with random numbers (to represent the
         // neutrino data stream pulled from the local observatory.
