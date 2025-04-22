@@ -107,12 +107,28 @@ namespace astronomical_processing_application
             // Select hour by using DataListBox.SelectedIndex.
             // Take the selected hour element and user input value, then replace.
         }
-        
+
         // Bubble Sort Button.
         private void SortButton_Click(object sender, EventArgs e)
         {
             // Run Bubble Sort here.
+            int max = dataArray.Length;
+            int temp = 0;
+
+            for (int outer = 0; outer < max; outer++)
+            {
+                for (int inner = 0; inner < max - 1; inner++)
+                {
+                    if (dataArray[inner] > dataArray[inner + 1])
+                    {
+                        temp = dataArray[inner + 1];
+                        dataArray[inner + 1] = dataArray[inner];
+                        dataArray[inner] = temp;
+                    }
+                }
+            }
             // Once sorted, refresh DataListBox element with updated array.
+            DisplayArray();
         }
 
         // Method to fill the array with random numbers (to represent the
@@ -138,7 +154,7 @@ namespace astronomical_processing_application
             }
         }
 
-        // Custom close and minimize buttons.
+        // Custom close and minimize buttons for borderless form.
         private void CloseButton_Click(object sender, EventArgs e)
         {
             Close();
