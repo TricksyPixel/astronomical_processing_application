@@ -1,22 +1,28 @@
 ﻿// Author Name: Kiersti Collins, 30118758
 // Team Name: Thi and Kier
-// Sprint Number: 1
-// Date: 16/04/2025
+// Sprint Number: 2
+// Date: 1/05/2025
 //
-// Version: 1.0
+// Version: 1.1
 // Program Name: Astronomical Processing
 //
-// Description: Application that displays neutrino data pulled from a local
+// Description: v1.0 - Application that displays neutrino data pulled from a local
 // observatory over 24 hour intervals. Data is stored as an array and
 // displayed. Users can sort the data numerically. Users can search the data
 // and edit data manually.
+//              v1.1 - Added ability to calculate the mid-extreme, mode, average,
+//                     and the range of the data.
+//                   - Added a sequential search.
+//                   - GUI changes.
 //
 // Inputs:      Search input, new value input
 //
-// Processes:   Randomize numbers to array (to simulate the data stream),
-//              Binary Search, Modify Data, Bubble Sort
+// Processes:   v1.0 -  Randomize numbers to array (to simulate the data stream),
+//                      Binary Search, Modify Data, Bubble Sort
+//              v1.1 -  Sequential Search, Calculate mid-extreme, mode, average, range.
 //
-// Outputs:     Data array in listbox, Search results in Results listbox
+// Outputs:     v1.0 -  Data array in listbox, Search results in Results listbox.
+//              v1.1 -  Calculation Results in listboxes for mid-extreme, mode, average, range.
 
 using System;
 using System.Collections.Generic;
