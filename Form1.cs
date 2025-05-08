@@ -215,14 +215,14 @@ namespace astronomical_processing_application
             float midExtreme;
 
             // Calculate the smallest, then largest array elements.
-            for (int x = 1; x < max; x++)
+            for (int x = 0; x < max; x++)
             {
                 if (dataArray[x] < smallest)
                 {
                     smallest = dataArray[x];
                 }
             }
-            for (int x = 1; x < max; x++)
+            for (int x = 0; x < max; x++)
             {
                 if (dataArray[x] > largest)
                 {
