@@ -37,6 +37,8 @@
             this.ResultsLabel = new System.Windows.Forms.Label();
             this.ResultsListBox = new System.Windows.Forms.ListBox();
             this.SearchGroupBox = new System.Windows.Forms.GroupBox();
+            this.SequentialToolTipLabel = new System.Windows.Forms.Label();
+            this.SequentialSearchButton = new System.Windows.Forms.Button();
             this.SearchSortWarningLabel = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -54,20 +56,18 @@
             this.BannerPictureBox = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DragPanel = new System.Windows.Forms.Panel();
-            this.SequentialSearchButton = new System.Windows.Forms.Button();
-            this.SequentialToolTipLabel = new System.Windows.Forms.Label();
             this.CalculationsGroupBox = new System.Windows.Forms.GroupBox();
-            this.CalculationsToolTipLabel = new System.Windows.Forms.Label();
-            this.CalculateLabel = new System.Windows.Forms.Label();
-            this.CalResultsLabel = new System.Windows.Forms.Label();
-            this.MidExtremeButton = new System.Windows.Forms.Button();
-            this.ModeButton = new System.Windows.Forms.Button();
-            this.AverageButton = new System.Windows.Forms.Button();
-            this.RangeButton = new System.Windows.Forms.Button();
-            this.MidExtremeResultsListBox = new System.Windows.Forms.ListBox();
-            this.ModeResultsListBox = new System.Windows.Forms.ListBox();
-            this.AverageResultsListBox = new System.Windows.Forms.ListBox();
             this.RangeResultsListBox = new System.Windows.Forms.ListBox();
+            this.AverageResultsListBox = new System.Windows.Forms.ListBox();
+            this.ModeResultsListBox = new System.Windows.Forms.ListBox();
+            this.MidExtremeResultsListBox = new System.Windows.Forms.ListBox();
+            this.RangeButton = new System.Windows.Forms.Button();
+            this.AverageButton = new System.Windows.Forms.Button();
+            this.ModeButton = new System.Windows.Forms.Button();
+            this.MidExtremeButton = new System.Windows.Forms.Button();
+            this.CalResultsLabel = new System.Windows.Forms.Label();
+            this.CalculateLabel = new System.Windows.Forms.Label();
+            this.CalculationsToolTipLabel = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -217,6 +217,32 @@
             this.SearchGroupBox.TabIndex = 10;
             this.SearchGroupBox.TabStop = false;
             this.SearchGroupBox.Text = "Search Data";
+            // 
+            // SequentialToolTipLabel
+            // 
+            this.SequentialToolTipLabel.AutoSize = true;
+            this.SequentialToolTipLabel.Font = new System.Drawing.Font("Calibri", 8F);
+            this.SequentialToolTipLabel.Location = new System.Drawing.Point(28, 140);
+            this.SequentialToolTipLabel.Name = "SequentialToolTipLabel";
+            this.SequentialToolTipLabel.Size = new System.Drawing.Size(193, 26);
+            this.SequentialToolTipLabel.TabIndex = 18;
+            this.SequentialToolTipLabel.Text = "Sequential Search will search data in its\r\ncurrent state, without sorting the dat" +
+    "a.";
+            // 
+            // SequentialSearchButton
+            // 
+            this.SequentialSearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
+            this.SequentialSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.SequentialSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.SequentialSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SequentialSearchButton.Font = new System.Drawing.Font("Calibri", 9F);
+            this.SequentialSearchButton.Location = new System.Drawing.Point(31, 169);
+            this.SequentialSearchButton.Name = "SequentialSearchButton";
+            this.SequentialSearchButton.Size = new System.Drawing.Size(121, 23);
+            this.SequentialSearchButton.TabIndex = 16;
+            this.SequentialSearchButton.Text = "Sequential Search";
+            this.SequentialSearchButton.UseVisualStyleBackColor = false;
+            this.SequentialSearchButton.Click += new System.EventHandler(this.SequentialSearchButton_Click);
             // 
             // SearchSortWarningLabel
             // 
@@ -422,31 +448,6 @@
             this.DragPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MouseMovePanel);
             this.DragPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUpPanel);
             // 
-            // SequentialSearchButton
-            // 
-            this.SequentialSearchButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
-            this.SequentialSearchButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.SequentialSearchButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.SequentialSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SequentialSearchButton.Font = new System.Drawing.Font("Calibri", 9F);
-            this.SequentialSearchButton.Location = new System.Drawing.Point(31, 169);
-            this.SequentialSearchButton.Name = "SequentialSearchButton";
-            this.SequentialSearchButton.Size = new System.Drawing.Size(121, 23);
-            this.SequentialSearchButton.TabIndex = 16;
-            this.SequentialSearchButton.Text = "Sequential Search";
-            this.SequentialSearchButton.UseVisualStyleBackColor = false;
-            // 
-            // SequentialToolTipLabel
-            // 
-            this.SequentialToolTipLabel.AutoSize = true;
-            this.SequentialToolTipLabel.Font = new System.Drawing.Font("Calibri", 8F);
-            this.SequentialToolTipLabel.Location = new System.Drawing.Point(28, 140);
-            this.SequentialToolTipLabel.Name = "SequentialToolTipLabel";
-            this.SequentialToolTipLabel.Size = new System.Drawing.Size(193, 26);
-            this.SequentialToolTipLabel.TabIndex = 18;
-            this.SequentialToolTipLabel.Text = "Sequential Search will search data in its\r\ncurrent state, without sorting the dat" +
-    "a.";
-            // 
             // CalculationsGroupBox
             // 
             this.CalculationsGroupBox.Controls.Add(this.RangeResultsListBox);
@@ -474,117 +475,18 @@
             this.CalculationsGroupBox.TabStop = false;
             this.CalculationsGroupBox.Text = "Calculations";
             // 
-            // CalculationsToolTipLabel
+            // RangeResultsListBox
             // 
-            this.CalculationsToolTipLabel.AutoSize = true;
-            this.CalculationsToolTipLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalculationsToolTipLabel.Location = new System.Drawing.Point(27, 33);
-            this.CalculationsToolTipLabel.Name = "CalculationsToolTipLabel";
-            this.CalculationsToolTipLabel.Size = new System.Drawing.Size(236, 28);
-            this.CalculationsToolTipLabel.TabIndex = 0;
-            this.CalculationsToolTipLabel.Text = "Use the buttons below to run calculations\r\nusing the neutrino data in the current" +
-    " list.";
-            // 
-            // CalculateLabel
-            // 
-            this.CalculateLabel.AutoSize = true;
-            this.CalculateLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalculateLabel.Location = new System.Drawing.Point(27, 87);
-            this.CalculateLabel.Name = "CalculateLabel";
-            this.CalculateLabel.Size = new System.Drawing.Size(61, 14);
-            this.CalculateLabel.TabIndex = 1;
-            this.CalculateLabel.Text = "Calculate:";
-            // 
-            // CalResultsLabel
-            // 
-            this.CalResultsLabel.AutoSize = true;
-            this.CalResultsLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CalResultsLabel.Location = new System.Drawing.Point(130, 86);
-            this.CalResultsLabel.Name = "CalResultsLabel";
-            this.CalResultsLabel.Size = new System.Drawing.Size(51, 14);
-            this.CalResultsLabel.TabIndex = 2;
-            this.CalResultsLabel.Text = "Results:";
-            // 
-            // MidExtremeButton
-            // 
-            this.MidExtremeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
-            this.MidExtremeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.MidExtremeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.MidExtremeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MidExtremeButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MidExtremeButton.Location = new System.Drawing.Point(30, 113);
-            this.MidExtremeButton.Name = "MidExtremeButton";
-            this.MidExtremeButton.Size = new System.Drawing.Size(95, 23);
-            this.MidExtremeButton.TabIndex = 3;
-            this.MidExtremeButton.Text = "Mid-extreme";
-            this.MidExtremeButton.UseVisualStyleBackColor = false;
-            // 
-            // ModeButton
-            // 
-            this.ModeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
-            this.ModeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.ModeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.ModeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ModeButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModeButton.Location = new System.Drawing.Point(30, 172);
-            this.ModeButton.Name = "ModeButton";
-            this.ModeButton.Size = new System.Drawing.Size(95, 23);
-            this.ModeButton.TabIndex = 4;
-            this.ModeButton.Text = "Mode";
-            this.ModeButton.UseVisualStyleBackColor = false;
-            // 
-            // AverageButton
-            // 
-            this.AverageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
-            this.AverageButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.AverageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.AverageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AverageButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AverageButton.Location = new System.Drawing.Point(30, 215);
-            this.AverageButton.Name = "AverageButton";
-            this.AverageButton.Size = new System.Drawing.Size(95, 23);
-            this.AverageButton.TabIndex = 5;
-            this.AverageButton.Text = "Average";
-            this.AverageButton.UseVisualStyleBackColor = false;
-            // 
-            // RangeButton
-            // 
-            this.RangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
-            this.RangeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.RangeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
-            this.RangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RangeButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangeButton.Location = new System.Drawing.Point(30, 260);
-            this.RangeButton.Name = "RangeButton";
-            this.RangeButton.Size = new System.Drawing.Size(95, 23);
-            this.RangeButton.TabIndex = 6;
-            this.RangeButton.Text = "Range";
-            this.RangeButton.UseVisualStyleBackColor = false;
-            // 
-            // MidExtremeResultsListBox
-            // 
-            this.MidExtremeResultsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.MidExtremeResultsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.MidExtremeResultsListBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MidExtremeResultsListBox.ForeColor = System.Drawing.Color.White;
-            this.MidExtremeResultsListBox.FormattingEnabled = true;
-            this.MidExtremeResultsListBox.ItemHeight = 14;
-            this.MidExtremeResultsListBox.Location = new System.Drawing.Point(133, 113);
-            this.MidExtremeResultsListBox.Name = "MidExtremeResultsListBox";
-            this.MidExtremeResultsListBox.Size = new System.Drawing.Size(120, 42);
-            this.MidExtremeResultsListBox.TabIndex = 7;
-            // 
-            // ModeResultsListBox
-            // 
-            this.ModeResultsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.ModeResultsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ModeResultsListBox.ForeColor = System.Drawing.Color.White;
-            this.ModeResultsListBox.FormattingEnabled = true;
-            this.ModeResultsListBox.ItemHeight = 14;
-            this.ModeResultsListBox.Location = new System.Drawing.Point(133, 172);
-            this.ModeResultsListBox.Name = "ModeResultsListBox";
-            this.ModeResultsListBox.Size = new System.Drawing.Size(120, 28);
-            this.ModeResultsListBox.TabIndex = 8;
+            this.RangeResultsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
+            this.RangeResultsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.RangeResultsListBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangeResultsListBox.ForeColor = System.Drawing.Color.White;
+            this.RangeResultsListBox.FormattingEnabled = true;
+            this.RangeResultsListBox.ItemHeight = 14;
+            this.RangeResultsListBox.Location = new System.Drawing.Point(133, 260);
+            this.RangeResultsListBox.Name = "RangeResultsListBox";
+            this.RangeResultsListBox.Size = new System.Drawing.Size(120, 28);
+            this.RangeResultsListBox.TabIndex = 10;
             // 
             // AverageResultsListBox
             // 
@@ -599,18 +501,121 @@
             this.AverageResultsListBox.Size = new System.Drawing.Size(120, 28);
             this.AverageResultsListBox.TabIndex = 9;
             // 
-            // RangeResultsListBox
+            // ModeResultsListBox
             // 
-            this.RangeResultsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
-            this.RangeResultsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.RangeResultsListBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RangeResultsListBox.ForeColor = System.Drawing.Color.White;
-            this.RangeResultsListBox.FormattingEnabled = true;
-            this.RangeResultsListBox.ItemHeight = 14;
-            this.RangeResultsListBox.Location = new System.Drawing.Point(133, 260);
-            this.RangeResultsListBox.Name = "RangeResultsListBox";
-            this.RangeResultsListBox.Size = new System.Drawing.Size(120, 28);
-            this.RangeResultsListBox.TabIndex = 10;
+            this.ModeResultsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
+            this.ModeResultsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ModeResultsListBox.ForeColor = System.Drawing.Color.White;
+            this.ModeResultsListBox.FormattingEnabled = true;
+            this.ModeResultsListBox.ItemHeight = 14;
+            this.ModeResultsListBox.Location = new System.Drawing.Point(133, 172);
+            this.ModeResultsListBox.Name = "ModeResultsListBox";
+            this.ModeResultsListBox.Size = new System.Drawing.Size(120, 28);
+            this.ModeResultsListBox.TabIndex = 8;
+            // 
+            // MidExtremeResultsListBox
+            // 
+            this.MidExtremeResultsListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(70)))), ((int)(((byte)(83)))));
+            this.MidExtremeResultsListBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.MidExtremeResultsListBox.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MidExtremeResultsListBox.ForeColor = System.Drawing.Color.White;
+            this.MidExtremeResultsListBox.FormattingEnabled = true;
+            this.MidExtremeResultsListBox.ItemHeight = 14;
+            this.MidExtremeResultsListBox.Location = new System.Drawing.Point(133, 113);
+            this.MidExtremeResultsListBox.Name = "MidExtremeResultsListBox";
+            this.MidExtremeResultsListBox.Size = new System.Drawing.Size(120, 42);
+            this.MidExtremeResultsListBox.TabIndex = 7;
+            // 
+            // RangeButton
+            // 
+            this.RangeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
+            this.RangeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.RangeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.RangeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RangeButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RangeButton.Location = new System.Drawing.Point(30, 260);
+            this.RangeButton.Name = "RangeButton";
+            this.RangeButton.Size = new System.Drawing.Size(95, 23);
+            this.RangeButton.TabIndex = 6;
+            this.RangeButton.Text = "Range";
+            this.RangeButton.UseVisualStyleBackColor = false;
+            this.RangeButton.Click += new System.EventHandler(this.RangeButton_Click);
+            // 
+            // AverageButton
+            // 
+            this.AverageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
+            this.AverageButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.AverageButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.AverageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AverageButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AverageButton.Location = new System.Drawing.Point(30, 215);
+            this.AverageButton.Name = "AverageButton";
+            this.AverageButton.Size = new System.Drawing.Size(95, 23);
+            this.AverageButton.TabIndex = 5;
+            this.AverageButton.Text = "Average";
+            this.AverageButton.UseVisualStyleBackColor = false;
+            this.AverageButton.Click += new System.EventHandler(this.AverageButton_Click);
+            // 
+            // ModeButton
+            // 
+            this.ModeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
+            this.ModeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.ModeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.ModeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ModeButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModeButton.Location = new System.Drawing.Point(30, 172);
+            this.ModeButton.Name = "ModeButton";
+            this.ModeButton.Size = new System.Drawing.Size(95, 23);
+            this.ModeButton.TabIndex = 4;
+            this.ModeButton.Text = "Mode";
+            this.ModeButton.UseVisualStyleBackColor = false;
+            this.ModeButton.Click += new System.EventHandler(this.ModeButton_Click);
+            // 
+            // MidExtremeButton
+            // 
+            this.MidExtremeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(48)))), ((int)(((byte)(95)))));
+            this.MidExtremeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.MidExtremeButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(61)))), ((int)(((byte)(125)))));
+            this.MidExtremeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MidExtremeButton.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MidExtremeButton.Location = new System.Drawing.Point(30, 113);
+            this.MidExtremeButton.Name = "MidExtremeButton";
+            this.MidExtremeButton.Size = new System.Drawing.Size(95, 23);
+            this.MidExtremeButton.TabIndex = 3;
+            this.MidExtremeButton.Text = "Mid-extreme";
+            this.MidExtremeButton.UseVisualStyleBackColor = false;
+            this.MidExtremeButton.Click += new System.EventHandler(this.MidExtremeButton_Click);
+            // 
+            // CalResultsLabel
+            // 
+            this.CalResultsLabel.AutoSize = true;
+            this.CalResultsLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalResultsLabel.Location = new System.Drawing.Point(130, 86);
+            this.CalResultsLabel.Name = "CalResultsLabel";
+            this.CalResultsLabel.Size = new System.Drawing.Size(51, 14);
+            this.CalResultsLabel.TabIndex = 2;
+            this.CalResultsLabel.Text = "Results:";
+            // 
+            // CalculateLabel
+            // 
+            this.CalculateLabel.AutoSize = true;
+            this.CalculateLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalculateLabel.Location = new System.Drawing.Point(27, 87);
+            this.CalculateLabel.Name = "CalculateLabel";
+            this.CalculateLabel.Size = new System.Drawing.Size(61, 14);
+            this.CalculateLabel.TabIndex = 1;
+            this.CalculateLabel.Text = "Calculate:";
+            // 
+            // CalculationsToolTipLabel
+            // 
+            this.CalculationsToolTipLabel.AutoSize = true;
+            this.CalculationsToolTipLabel.Font = new System.Drawing.Font("Calibri", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CalculationsToolTipLabel.Location = new System.Drawing.Point(27, 33);
+            this.CalculationsToolTipLabel.Name = "CalculationsToolTipLabel";
+            this.CalculationsToolTipLabel.Size = new System.Drawing.Size(236, 28);
+            this.CalculationsToolTipLabel.TabIndex = 0;
+            this.CalculationsToolTipLabel.Text = "Use the buttons below to run calculations\r\nusing the neutrino data in the current" +
+    " list.";
             // 
             // pictureBox5
             // 

@@ -30,6 +30,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -55,6 +56,8 @@ namespace astronomical_processing_application
             // Call DisplayArray to display the neutrino data onto the DataListBox.
             DisplayArray();
         }
+
+        // SEARCH DATA GROUP
 
         // Binary Search Button
         private void SearchButton_Click(object sender, EventArgs e)
@@ -106,6 +109,42 @@ namespace astronomical_processing_application
             SearchTextBox.Clear();
         }// End Binary Search Button.
 
+        // Sequential Search Button.
+        private void SequentialSearchButton_Click(object sender, EventArgs e)
+        {
+            int target;
+            int max = dataArray.Length;
+            bool found = false;
+
+            // Check for correct user input.
+            if (!(Int32.TryParse(SearchTextBox.Text, out target)))
+            {
+                MessageBox.Show("You must enter an integer number.");
+                return;
+            }
+            
+            // Run sequential search.
+            for (int x = 0; x < max; x++)
+            {
+                if (dataArray[x] == target)
+                {
+                    ResultsListBox.Items.Clear();
+                    SearchTextBox.Clear();
+                    ResultsListBox.Items.Add("Searching for: " + target);
+                    ResultsListBox.Items.Add(" ");
+                    ResultsListBox.Items.Add("Found search result at index: " + (x + 1));
+                    DataListBox.SetSelected(x, true);
+                    found = true;
+                    return;
+                }
+            }
+            if (!found)
+            {
+                MessageBox.Show("Search result not found. Please try again.");
+                SearchTextBox.Clear();
+            }
+        }// End Sequential Search Button.
+
         // Modify Element Button.
         private void ModifyButton_Click(object sender, EventArgs e)
         {
@@ -141,6 +180,8 @@ namespace astronomical_processing_application
             }
         }// End Modify Element Button.
 
+        // SORT GROUP
+
         // Bubble Sort Button.
         private void SortButton_Click(object sender, EventArgs e)
         {
@@ -163,6 +204,130 @@ namespace astronomical_processing_application
             // Once sorted, refresh DataListBox element with updated array.
             DisplayArray();
         }// End Bubble Sort Button
+
+        // CALCULATIONS GROUP
+
+        // Run Mid-Extreme calculation.
+        private void MidExtremeButton_Click(object sender, EventArgs e)
+        {
+            float smallest = dataArray[0];
+            float largest = dataArray[0];
+            float midExtreme;
+
+            // Calculate the smallest, then largest array elements.
+            for (int x = 1; x < max; x++)
+            {
+                if (dataArray[x] < smallest)
+                {
+                    smallest = dataArray[x];
+                }
+            }
+            for (int x = 1; x < max; x++)
+            {
+                if (dataArray[x] > largest)
+                {
+                    largest = dataArray[x];
+                }
+            }
+
+            // Calculate the mid-extreme and output result into the results listbox.
+            midExtreme = (smallest + largest) / 2;
+
+            MidExtremeResultsListBox.Items.Clear();
+            MidExtremeResultsListBox.Items.Add("Smallest value: " + smallest);
+            MidExtremeResultsListBox.Items.Add("Largest value: " + largest);
+            MidExtremeResultsListBox.Items.Add("Mid-extreme: " + midExtreme);
+        }// End Mid-Extreme Calculation.
+
+        // Run Mode Calculation.
+        private void ModeButton_Click(object sender, EventArgs e)
+        {
+            int element;
+            int frequency = 1;
+            int max = dataArray.Length;
+            int mode = 0;
+            int counter;
+
+            // Calculate the mode.
+            for (int i = 0; i < max; i++)
+            {
+                counter = 0;
+                element = dataArray[i];
+                for (int j = 0; j < max; j++)
+                {
+                    if (element == dataArray[j])
+                    {
+                        counter++;
+                    }
+                }
+                if (counter >= frequency)
+                {
+                    frequency = counter;
+                    mode = element;
+                }
+            }
+
+            // Display the results into the Mode results textbox.
+            ModeResultsListBox.Items.Clear();
+            ModeResultsListBox.Items.Add("Mode: " + mode);
+            ModeResultsListBox.Items.Add("Appearances: " + frequency);
+        }// End Mode Calculation.
+
+        // Run Average Calculation.
+        private void AverageButton_Click(object sender, EventArgs e)
+        {
+            float average;
+            float max = dataArray.Length;
+            float currentIndex = dataArray[0];
+            float additionResult = 0;
+
+            for (int x = 0; x < max; x++)
+            {
+                currentIndex = dataArray[x];
+                additionResult = currentIndex + additionResult;
+            }
+
+            average = additionResult / max;
+            // Use the average as a 2 decimal point in a string.
+            string twoDecimalAverage = $"{average:F2}";
+
+            // Display the results into the Average results textbox.
+            AverageResultsListBox.Items.Clear();
+            AverageResultsListBox.Items.Add("Average: " + twoDecimalAverage);
+
+        }// End Average Calculation.
+
+        // Run Range Calculation.
+        private void RangeButton_Click(object sender, EventArgs e)
+        {
+            int smallest = dataArray[0];
+            int largest = dataArray[0];
+            int range;
+
+            // Get the smallest and largest results from the data array.
+            for (int x = 1; x < max; x++)
+            {
+                if (dataArray[x] < smallest)
+                {
+                    smallest = dataArray[x];
+                }
+            }
+            for (int x = 1; x < max; x++)
+            {
+                if (dataArray[x] > largest)
+                {
+                    largest = dataArray[x];
+                }
+            }
+
+            // Calculate the difference between the largest and smallest to
+            // get the range.
+            range = largest - smallest;
+
+            //Display results to the Range results textbox.
+            RangeResultsListBox.Items.Clear();
+            RangeResultsListBox.Items.Add("Range: " + range);
+        }// End Range Calculation.
 
         // Method to fill the array with random numbers (to represent the
         // neutrino data stream pulled from the local observatory.
