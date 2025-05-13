@@ -165,6 +165,7 @@ namespace astronomical_processing_application
                 {
                     dataArray[selected] = newValue;
                     DisplayArray();
+                    DataListBox.SetSelected(selected, true);
                     return;
                 }
                 else
